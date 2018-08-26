@@ -26,9 +26,13 @@ file.
 
 * Key bindings
 
-| Key Binding | Description    |
-|-------------+----------------|
-| ~SPC x x x~ | Does thing01   |
+| Key Binding | Description            |
+|-------------+------------------------|
+| ~, =~       | 'rust-format-buffer    |
+| ~, r~       | 'eglot-rename          |
+| ~, h~       | 'eglot-help-at-point   |
+| ~, g~       | 'xref-find-definitions |
+| ~, f~       | 'xref-find-references  |
 
 # Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
 # Examples:

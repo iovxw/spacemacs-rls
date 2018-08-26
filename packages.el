@@ -67,7 +67,17 @@ Each entry is either:
   (use-package eglot
     :commands eglot-ensure
     :init
-    (add-hook 'rust-mode-hook 'eglot-ensure)))
+    (progn
+      (add-hook 'rust-mode-hook 'eglot-ensure)
+      (spacemacs/set-leader-keys-for-major-mode 'rust-mode
+        "r" 'eglot-rename
+        "h" 'eglot-help-at-point
+        "g" 'xref-find-definitions
+        "f" 'xref-find-references)
+      ;; for spacemacs/jump-to-definition and `gd` `gD`
+      ;; (add-to-list 'spacemacs-jump-handlers-rust-mode 'xref-find-definitions)
+      ;; (spacemacs/declare-prefix-for-mode 'rust-mode "mg" "goto")
+      )))
 
 (defun rls/init-rust-mode ()
   (use-package rust-mode
