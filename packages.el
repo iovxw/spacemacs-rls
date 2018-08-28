@@ -73,6 +73,7 @@ Each entry is either:
         "r" 'eglot-rename
         "h" 'eglot-help-at-point
         "g" 'xref-find-definitions
+        "G" 'xref-find-definitions-other-window
         "f" 'xref-find-references)
       ;; for spacemacs/jump-to-definition and `gd` `gD`
       ;; (add-to-list 'spacemacs-jump-handlers-rust-mode 'xref-find-definitions)
